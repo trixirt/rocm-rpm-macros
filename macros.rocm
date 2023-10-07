@@ -5,7 +5,7 @@
 %rocm_buildrequires cmake compiler-rt clang-devel lld llvm-devel ninja-build rocm-cmake rocm-comgr-devel rocm-hip-devel rocm-runtime-devel
 %rocm_buildrequires_test gtest-devel
 
-%rocm_cmake_options -G Ninja -DBUILD_FILE_REORG_BACKWARD_COMPATIBILITY=OFF -DROCM_SYMLINK_LIBS=OFF
+%rocm_cmake_options -G Ninja -DBUILD_FILE_REORG_BACKWARD_COMPATIBILITY=OFF -DROCM_SYMLINK_LIBS=OFF -DHIP_PLATFORM=amd -DAMDGPU_TARGETS=$ROCM_GPUS -DCMAKE_INSTALL_LIBDIR=$ROCM_LIB -DCMAKE_INSTALL_BINDIR=$ROCM_BIN 
 %rocm_cmake_test_options -DBUILD_CLIENTS_BENCHMARKS=ON -DBUILD_CLIENTS_TESTS=ON -DBUILD_CLIENTS_TESTS_OPENMP=OFF -DBUILD_FORTRAN_CLIENTS=OFF
 
 %rocm_gpu_list gfx8 gfx9 gfx10 gfx11 default

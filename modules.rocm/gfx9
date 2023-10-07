@@ -7,6 +7,6 @@ conflict rocm
 
 setenv        ROCM_BIN      /usr/lib64/rocm/gfx9/bin
 setenv        ROCM_LIB      /usr/lib64/rocm/gfx9/lib
-setenv        ROCM_GPUS     gfx900,gfx906:xnack-,gfx908:xnack-,gfx90a:xnack+,gfx90a:xnack-
+setenv        ROCM_GPUS     gfx900,gfx906:xnack-,gfx908:xnack-,gfx90a:xnack+,gfx90a:xnack-,gfx940,gfx941,gfx942
 prepend-path  PATH          /usr/lib64/rocm/gfx9/bin
 prepend-path  LD_LIBRARY_PATH /usr/lib64/rocm/gfx9/lib
