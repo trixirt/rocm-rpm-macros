@@ -1,12 +1,8 @@
-%rocm_release 5.7
-%rocm_patch 0
-%rocm_version %{rocm_release}.%{rocm_patch}
-
 %rocm_buildrequires cmake compiler-rt clang-devel lld  llvm-devel ninja-build rocm-cmake rocm-comgr-devel rocm-hip-devel rocm-runtime-devel rocm-modules
 
 %rocm_buildrequires_test gtest-devel
 
-%rocm_requires rocm-modules
+%rocm_requires rocm-rpm-macros-modules
 
 %rocm_cmake_options -G Ninja -DBUILD_FILE_REORG_BACKWARD_COMPATIBILITY=OFF -DROCM_SYMLINK_LIBS=OFF -DHIP_PLATFORM=amd -DAMDGPU_TARGETS=$ROCM_GPUS -DCMAKE_INSTALL_LIBDIR=$ROCM_LIB -DCMAKE_INSTALL_BINDIR=$ROCM_BIN 
 %rocm_cmake_test_options -DBUILD_CLIENTS_BENCHMARKS=ON -DBUILD_CLIENTS_TESTS=ON -DBUILD_CLIENTS_TESTS_OPENMP=OFF -DBUILD_FORTRAN_CLIENTS=OFF
