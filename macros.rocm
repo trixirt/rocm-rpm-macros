@@ -1,4 +1,4 @@
-%rocm_buildrequires cmake compiler-rt clang-devel lld  llvm-devel ninja-build rocm-cmake rocm-comgr-devel rocm-hip-devel rocm-runtime-devel rocm-modules
+%rocm_buildrequires cmake compiler-rt clang-devel lld  llvm-devel ninja-build rocm-cmake rocm-comgr-devel rocm-hip-devel rocm-runtime-devel rocm-rpm-macros-modules
 
 %rocm_buildrequires_test gtest-devel
 
